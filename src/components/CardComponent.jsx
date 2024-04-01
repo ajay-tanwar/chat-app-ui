@@ -14,7 +14,7 @@ const CardComponent = (props) => {
   const { index } = props;
   return (
     <Box key={index} className={classes.root}>
-      <Box sx={{ width: "700px", height: "125px", backgroundColor: '#FFFFFFFF', borderRadius: "15px", padding: "15px" }}>
+      <Box className={classes.subRoot}>
         <Box sx={{
           display: "flex",
           justifyContent: "space-between",
@@ -58,8 +58,15 @@ export default CardComponent;
 
 const useStyles = makeStyles({
   root: {
-    display: 'flex', 
-    justifyContent: 'center', 
+    display: 'flex',
+    justifyContent: 'center',
     marginBottom: '10px'
   },
+  subRoot: {
+    width: "700px",
+    height: "125px",
+    backgroundColor: '#FFFFFFFF',
+    borderRadius: "15px",
+    padding: "15px"
+  }
 });

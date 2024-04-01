@@ -20,6 +20,7 @@ import {
   IconButton,
   ListItemButton,
   ListItemText,
+  TextField
 } from "@mui/material";
 import AddButtonComponent from './AddButtonComponent';
 import SearchInputComponent from './SearchInputComponent';
@@ -156,6 +157,22 @@ export default function DrawerComponent() {
             <CardComponent index={index} />
           )
         })}
+        <Box sx={{
+          background: '#FFFFFFFF', width: "700px",
+          borderRadius: "10px",
+          position: 'absolute',
+          bottom: 0,
+          marginLeft: '180px'
+        }}>
+          <TextField
+            placeholder="Ask a question"
+            multiline
+            sx={{ width: "700px"}}
+            rows={2}
+            maxRows={4}
+          />
+
+        </Box>
       </Main>
     </Box>
   );
